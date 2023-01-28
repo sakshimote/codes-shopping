@@ -1,0 +1,32 @@
+
+app:
+  description: welcome to ${app.name}
+  name: my app
+db:
+  connection: '{connectionString:''http//___'', userName:''foo'',password:''pass''}'
+  host: 127.0.0.1
+  port: 1200
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+my:
+  greeting: hello
+  list:
+    values: one,two,three,four,five
+spring:
+  profiles:
+    active:test
+    
+  application:
+    name: cloud-client  
+    
+    
+    
+  cloud:
+    config:
+      enabled: true
+      import:
+        optional:
+          configserver:http://localhost:8888
